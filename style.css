@@ -56,6 +56,7 @@ img {
   border-radius: 50%;
   width: 37px;
   border: thistle solid 2px;
+  margin-right: 13px;
 }
 .upper-card {
   display: flex;
@@ -81,3 +82,19 @@ p {
   opacity: 0.7;
   margin: 15px 15px;
 }
+@media screen and (max-widt: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .block-left-upper {
+    flex-direction: column;
+  }
+  .block-left {
+    flex-direction: column;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
