@@ -7,12 +7,18 @@
 }
 body {
   background-color: hsl(0, 0%, 81%);
+  display: flex;
+
+  justify-content: center;
 }
 .container {
   background-color: hsl(0, 0%, 81%);
   display: flex;
-  margin: 100px auto 100px;
-  width: 80%;
+  /* margin: 100px auto 100px; */
+  width: 1100px;
+  height: 580px;
+  margin-top: 80px;
+  flex-wrap: wrap;
 }
 .top-left,
 .top-right,
@@ -20,37 +26,49 @@ body {
 .bottom-left,
 .block-right {
   border-radius: 10px;
-  /* border: 2px solid black; */
 }
 .block-left {
-  width: 60%;
   display: flex;
   flex-direction: column;
+  height: 612px;
+  width: 800px;
 }
 .block-left-upper {
   display: flex;
   margin-bottom: 15px;
+  width: 800px;
+  height: 290px;
 }
 .block-left-bottom {
   display: flex;
+  width: 800px;
+  height: 290px;
 }
 
 .top-left {
   background-color: hsl(263, 55%, 52%);
   color: white;
-  margin-right: 25px;
+  margin-right: 15px;
+  width: 530px;
+  height: 290px;
 }
 .top-right {
   background-color: hsl(217, 19%, 35%);
   color: white;
+  width: 230px;
+  height: 290px;
 }
 .bottom-right {
   background-color: hsl(219, 29%, 14%);
   color: white;
+  width: 530px;
+  height: 290px;
 }
 .bottom-left {
   background-color: white;
-  margin-right: 25px;
+  margin-right: 15px;
+  width: 230px;
+  height: 290px;
 }
 img {
   border-radius: 50%;
@@ -63,10 +81,10 @@ img {
   margin: 10px 15px 20px;
 }
 .block-right {
-  width: 20%;
+  width: 270px;
+  height: 593px;
   display: block;
   align-self: stretch;
-  margin-left: 25px;
   background-color: white;
 }
 span {
@@ -82,19 +100,41 @@ p {
   opacity: 0.7;
   margin: 15px 15px;
 }
-@media screen and (max-widt: 900px) {
+@media screen and (max-width: 1290px) {
   .container {
-    flex-direction: column;
+    height: 870px;
+    justify-content: center;
   }
-  .block-left-upper {
-    flex-direction: column;
+
+  .block-left {
+    margin: 0px;
+
+    width: 785px;
+  }
+  .block-right {
+    height: 250px;
+    width: 780px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 940px) {
+  .container {
+    width: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .block-left {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .top-left,
+  .top-right,
+  .bottom-left,
+  .bottom-right,
+  .block-right {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
